@@ -12,7 +12,7 @@ public class MainClass {
         driver.get("https://www.ubuy.com.tr/");
 
         //Adding wait
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //Maximise browser window
         driver.manage().window().maximize();
@@ -20,6 +20,8 @@ public class MainClass {
         MainPage mainPage = new MainPage(driver);
         SignIn signIn = new SignIn(driver);
         SignUp signUp = new SignUp(driver);
+        ProductPage productPage = new ProductPage(driver);
+        ProductCard productCard = new ProductCard(driver);
 
         mainPage.openMenu();
 //        mainPage.clickSignIn();
@@ -29,8 +31,12 @@ public class MainClass {
 //        signIn.getLoginErrorMsg();
 //        signIn.getPasswordErrorMsg();
 
-        mainPage.clickSignUp();
-        signUp.registration("username", "446468468", "fvdbvhb@fndjkv.co", "fvnd5^jkbvd");
+//        mainPage.clickSignUp();
+//        signUp.registration("username", "446468468", "fvdbvhb@fndjkv.co", "fvnd5^jkbvd");
+
+        mainPage.clickProductBtn();
+        productPage.productFilter();
+        productPage.clickProductItem();
 
     }
 }

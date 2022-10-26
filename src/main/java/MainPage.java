@@ -13,6 +13,7 @@ public class MainPage {
     private By loginPageBtn = By.xpath("//ul[contains(@class, 'dropdown-menu')]/li[1]/a[contains(@href, 'login')]");
     private By signUpPageBtn = By.xpath("//ul[contains(@class, 'dropdown-menu')]/li[2]/a[contains(@href, 'create')]");
     private By popupCloseBtn = By.xpath("//a[contains(@class, 'change-country')]");
+    private By productBtn = By.xpath("//div[@class='products-listing']//li[2]/a");
 
 
     public MainPage closeAction(){
@@ -35,5 +36,9 @@ public class MainPage {
         return new SignIn(driver);
     }
 
+    public ProductPage clickProductBtn(){
+        driver.findElement(productBtn).click();
+        return new ProductPage(driver);
+    }
 
 }
