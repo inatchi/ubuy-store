@@ -27,6 +27,13 @@ public class SignIn {
         return this;
     }
 
+    public SignUp logIn(String email, String password){
+        this.typeEmail(email);
+        this.typePassword(password);
+        driver.findElement(loginBtn).click();
+        return new SignUp(driver);
+    }
+
     public SignIn loginWithInvalidCreds(String email, String password){
         this.typeEmail(email);
         this.typePassword(password);

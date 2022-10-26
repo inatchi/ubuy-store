@@ -9,11 +9,21 @@ public class MainPage {
         this.driver = driver;
     }
 
-    private By menuBtn = By.xpath("class=\"header-right\"");
-    private By loginPageBtn = By.xpath("//ul[contains(@class, \"dropdown-menu\")]/li[1]/a[contains(@href, 'login')]");
-    private By signUpPageBtn = By.xpath("//ul[contains(@class, \"dropdown-menu\")]/li[2]/a[contains(@href, 'create')]");
+    private By menuBtn = By.xpath("//div[@class='header-right']//li[4]/a[@id='acoount-manage']");
+    private By loginPageBtn = By.xpath("//ul[contains(@class, 'dropdown-menu')]/li[1]/a[contains(@href, 'login')]");
+    private By signUpPageBtn = By.xpath("//ul[contains(@class, 'dropdown-menu')]/li[2]/a[contains(@href, 'create')]");
+    private By popupCloseBtn = By.xpath("//a[contains(@class, 'change-country')]");
 
 
+    public MainPage closeAction(){
+        driver.findElement(popupCloseBtn).click();
+        return new MainPage(driver);
+    }
+
+    public MainPage openMenu(){
+        driver.findElement(menuBtn).click();
+        return new MainPage(driver);
+    }
 
     public SignUp clickSignUp(){
         driver.findElement(signUpPageBtn).click();
