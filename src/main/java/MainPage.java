@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import sun.applet.Main;
 
 public class MainPage {
     private WebDriver driver;
@@ -23,4 +24,6 @@ public class MainPage {
         driver.findElement(loginPageBtn).click();
         return new SignIn(driver);
     }
+
+
 }
