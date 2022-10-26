@@ -20,8 +20,5 @@ public class SignUp {
         driver.findElement(createBtn).click();
     }
 
-//    public SignIn clickSignIn(){
-//        driver.findElement(loginBtn).click();
-//        return new SignIn()
-//    }
+
 }

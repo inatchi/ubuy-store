@@ -13,7 +13,12 @@ public class SignIn {
     private By passwordInput = By.xpath("//input[@name=\"login[password]\"]");
     private By loginBtn = By.xpath("//button[@id=\"login-form-btn\"]");
 
-    public void clickSignIn(){
+//    public void clickSignIn(){
+//        driver.findElement(loginBtn).click();
+//    }
+
+    public SignUp clickSignIn(){
         driver.findElement(loginBtn).click();
+        return new SignUp(driver);
     }
 }
