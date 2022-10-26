@@ -55,10 +55,42 @@ public class SignUp {
         this.typePhone(telephone);
         this.typeEmail(email);
         this.typePassword(password);
+        this.typePasswordConfirmation(password);
         this.clickSignUp();
+        return new SignUp(driver);
+    }
+
+    public SignUp loginWithInvalidCreds(String username, String telephone, String email, String password){
+        this.typeName(username);
+        this.typePhone(telephone);
+        this.typeEmail(email);
+        this.typePassword(password);
+        this.typePasswordConfirmation(password);
+        driver.findElement(createBtn).click();
         return new SignUp(driver);
     }
     public String getHeadingText(){
         return driver.findElement(heading).getText();
+    }
+    public String getfullnameErrorMsg(){
+        return driver.findElement(fullnameErrorMsg).getText();
+    }
+    public String getPhoneErrorMsg(){
+        return driver.findElement(phoneErrorMsg).getText();
+    }
+    public String getEmailErrorMsg(){
+        return driver.findElement(emailErrorMsg).getText();
+    }
+    public String getPasswordErrorMsg(){
+        return driver.findElement(passwordErrorMsg).getText();
+    }
+    public String getPasswordConfirmErrorMsg(){
+        return driver.findElement(passwordConfirmErrorMsg).getText();
+    }
+    public String getCheckboxErrorMsg(){
+        return driver.findElement(checkboxErrorMsg).getText();
+    }
+    public String getCapthaErrorMsg(){
+        return driver.findElement(capthaErrorMsg).getText();
     }
 }

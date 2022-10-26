@@ -15,12 +15,12 @@ public class MainPage {
 
 
 
-    public SignUp clickSignIn(){
+    public SignUp clickSignUp(){
         driver.findElement(signUpPageBtn).click();
         return new SignUp(driver);
     }
 
-    public SignIn clickSignUp(){
+    public SignIn clickSignIn(){
         driver.findElement(loginPageBtn).click();
         return new SignIn(driver);
     }
