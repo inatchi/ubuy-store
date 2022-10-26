@@ -21,6 +21,7 @@ public class MainClass {
         SignIn signIn = new SignIn(driver);
 
         //mainPage.closeAction();
+        //
         mainPage.openMenu();
         mainPage.clickSignIn();
 
