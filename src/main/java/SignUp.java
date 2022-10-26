@@ -56,6 +56,9 @@ public class SignUp {
         this.typeEmail(email);
         this.typePassword(password);
         this.typePasswordConfirmation(password);
+        this.driver.findElement(checkboxMailingList).click();
+        this.driver.findElement(checkboxTerms).click();
+        this.driver.findElement(checkboxCapcha).click();
         this.clickSignUp();
         return new SignUp(driver);
     }
@@ -72,7 +75,7 @@ public class SignUp {
     public String getHeadingText(){
         return driver.findElement(heading).getText();
     }
-    public String getfullnameErrorMsg(){
+    public String getFullNameErrorMsg(){
         return driver.findElement(fullnameErrorMsg).getText();
     }
     public String getPhoneErrorMsg(){
@@ -90,7 +93,7 @@ public class SignUp {
     public String getCheckboxErrorMsg(){
         return driver.findElement(checkboxErrorMsg).getText();
     }
-    public String getCapthaErrorMsg(){
+    public String getCapchaErrorMsg(){
         return driver.findElement(capthaErrorMsg).getText();
     }
 }

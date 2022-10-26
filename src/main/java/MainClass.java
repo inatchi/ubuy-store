@@ -19,13 +19,18 @@ public class MainClass {
 
         MainPage mainPage = new MainPage(driver);
         SignIn signIn = new SignIn(driver);
+        SignUp signUp = new SignUp(driver);
 
-        //mainPage.closeAction();
-        //
         mainPage.openMenu();
-        mainPage.clickSignIn();
+//        mainPage.clickSignIn();
+//
+//        signIn.logIn("fvdbhvb@mail.com", "fvdfvfdvfd");
+//        signIn.getHeadingText();
+//        signIn.getLoginErrorMsg();
+//        signIn.getPasswordErrorMsg();
 
-        signIn.logIn("fvdbhvb", "fvdfvfdvfd");
+        mainPage.clickSignUp();
+        signUp.registration("username", "446468468", "fvdbvhb@fndjkv.co", "fvnd5^jkbvd");
 
     }
 }

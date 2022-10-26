@@ -12,9 +12,9 @@ public class SignIn {
     private By emailInput = By.xpath("//input[@name='login[username]']");
     private By passwordInput = By.xpath("//input[@name='login[password]']");
     private By loginBtn = By.xpath("//button[@id='login-form-btn']");
-    private By heading = By.xpath("//div[@class=\"p-5\"]/p");
-    private By loginErrorMsg = By.xpath("//div[@id=\"login.username-error\"]");
-    private By passwordErrorMsg = By.xpath("//div[@id=\"login.password-error\"]");
+    private By heading = By.xpath("//div[@class='p-5']/p");
+    private By loginErrorMsg = By.xpath("//div[@id='login.username-error']");
+    private By passwordErrorMsg = By.xpath("//div[@id='login.password-error']");
     private By createAccountBtn = By.xpath("//a[text()='Create an Account']");
 
     public SignIn typeEmail(String email){
@@ -50,7 +50,7 @@ public class SignIn {
         return driver.findElement(passwordErrorMsg).getText();
     }
 
-    public SignUp clickSignIn(){
+    public SignUp clickSignUp(){
         driver.findElement(createAccountBtn).click();
         return new SignUp(driver);
     }
