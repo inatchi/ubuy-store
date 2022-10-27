@@ -37,6 +37,8 @@ public class MainClass {
         mainPage.clickProductBtn();
         productPage.productFilter();
         productPage.clickProductItem();
+        productCard.addToCart();
+        productCard.goToTheCart();
 
     }
 }

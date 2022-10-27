@@ -8,15 +8,14 @@ public class ProductPage {
         this.driver = driver;
     }
 
-    public By priceRadioBtn = By.xpath("//div[@class='input-checkbox']//input[@id='rdo_price_1']");
-    public By iRobotCheckbox = By.xpath("//div[contains(@class, 'input-checkbox')]/input[@value='iRobot']");
-    public By SharkCheckbox = By.xpath("//div[contains(@class, 'input-checkbox')]/input[@value='Shark']");
+    public By priceRadioBtn = By.xpath("//div[@class='input-checkbox']//label[@for='rdo_price_1']");
+    public By iRobotCheckbox = By.xpath("//div[contains(@class, 'input-checkbox')]/label[@for='chbx_2']");
+    public By SharkCheckbox = By.xpath("//div[contains(@class, 'input-checkbox')]/label[@for='chbx_3']");
     public By firstProductCard = By.xpath("//div[@id='usstore-products']/div[contains(@class, 'product-inner-list')][1]");
 
     public ProductPage productFilter(){
         driver.findElement(priceRadioBtn).click();
         driver.findElement(iRobotCheckbox).click();
-        driver.findElement(SharkCheckbox).click();
         return this;
     }
 
