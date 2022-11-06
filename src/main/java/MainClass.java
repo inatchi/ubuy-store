@@ -7,7 +7,7 @@ public class MainClass {
     static WebDriver driver;
 
     public static void main(String[] args) {
-        System.setProperty("web-driver.chrome.driver","C:\\tools\\chromedriver.exe");
+        System.setProperty("chromedriver","/opt/homebrew/bin");
         driver = new ChromeDriver();
         driver.get("https://www.ubuy.com.tr/");
 
@@ -24,21 +24,22 @@ public class MainClass {
         ProductCard productCard = new ProductCard(driver);
 
         mainPage.openMenu();
-//        mainPage.clickSignIn();
-//
-//        signIn.logIn("fvdbhvb@mail.com", "fvdfvfdvfd");
-//        signIn.getHeadingText();
-//        signIn.getLoginErrorMsg();
-//        signIn.getPasswordErrorMsg();
+        mainPage.clickSignIn();
+        //mainPage.clickSignIn();
+
+        signIn.logIn("fvdbhvb@mail.com", "fvdfvfdvfd");
+        signIn.getHeadingText();
+        signIn.getLoginErrorMsg();
+        signIn.getPasswordErrorMsg();
 
 //        mainPage.clickSignUp();
 //        signUp.registration("username", "446468468", "fvdbvhb@fndjkv.co", "fvnd5^jkbvd");
 
-        mainPage.clickProductBtn();
-        productPage.productFilter();
+        //mainPage.clickProductBtn();
+        //productPage.productFilter();
         productPage.clickProductItem();
         productCard.addToCart();
-        productCard.goToTheCart();
+        //productCard.goToTheCart();
 
     }
 }
